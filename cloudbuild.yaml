@@ -4,19 +4,19 @@ steps:
   name: 'golang'
   env:
   - GOPATH=./src
-  args: ['test']
+  args: ['go', test', '.']
 
 - id: "Rodando script"
   name: 'golang'
   env:
   - GOPATH=./src
-  args: ['run']
+  args: ['go', run', '.']
 
 - id: "Rodando Build"
   name: 'golang'
   env:
   - GOPATH=./src
-  args: ['build']
+  args: ['go', build', '.']
 
 images:
   - 'gcr.io/$PROJECT_ID/go-soma:latest'
