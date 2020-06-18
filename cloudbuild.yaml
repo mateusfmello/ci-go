@@ -1,19 +1,19 @@
 steps:
 
 - id: "Rodando Testes"
-  name: 'gcr.io/cloud-builders/go'
+  name: 'golang'
   env:
   - GOPATH=./src
   args: ['test']
 
 - id: "Rodando script"
-  name: 'gcr.io/cloud-builders/go'
+  name: 'golang'
   env:
   - GOPATH=./src
   args: ['run']
 
 - id: "Rodando Build"
-  name: 'gcr.io/cloud-builders/go'
+  name: 'golang'
   env:
   - GOPATH=./src
   args: ['build']
