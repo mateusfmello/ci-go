@@ -1,0 +1,13 @@
+steps:
+
+- id: "Rodando Testes"
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test']
+
+- id: "Rodando Build"
+  name: 'gcr.io/cloud-builders/go'
+  args: ['build', '-ldflags', '"-s -w"']
+
+images:
+  - 'gcr.io/$PROJECT_ID/go-soma:latest'
+  - 'gcr.io/$PROJECT_ID/go-soma:0.0.1'
