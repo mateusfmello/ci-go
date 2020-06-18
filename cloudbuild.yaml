@@ -3,19 +3,19 @@ steps:
 - id: "Rodando Testes"
   name: 'golang'
   env:
-  - GOPATH=src
+  - GOPATH=/src
   args: ['go', test', '.']
 
 - id: "Rodando script"
   name: 'golang'
   env:
-  - GOPATH=src
+  - GOPATH=/src
   args: ['go', run', '.']
 
 - id: "Rodando Build"
   name: 'golang'
   env:
-  - GOPATH=src
+  - GOPATH=/src
   args: ['go', build', '.']
 
 images:
