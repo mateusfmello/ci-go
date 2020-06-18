@@ -1,12 +1,16 @@
 steps:
 
+- id: "Definindo o PATH"
+  name: golang
+  args: ['mod', 'init', '/src']
+
 - id: "Rodando Testes"
-  name: 'gcr.io/cloud-builders/go'
-  args: ['test']
+  name: golang
+  args: ['test', '.']
 
 - id: "Rodando Build"
-  name: 'gcr.io/cloud-builders/go'
-  args: ['build', '-ldflags', '"-s -w"']
+  name: golang
+  args: ['build', '-ldflags', '"-s -w"', '.']
 
 images:
   - 'gcr.io/$PROJECT_ID/go-soma:latest'
