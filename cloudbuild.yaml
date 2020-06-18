@@ -1,15 +1,15 @@
 steps:
 
 - id: "Rodando Testes"
-  name: golang
+  name: 'gcr.io/cloud-builders/go'
   args: ['test']
 
 - id: "Rodando script"
-  name: golang
+  name: 'gcr.io/cloud-builders/go'
   args: ['run']
 
 - id: "Rodando Build"
-  name: golang
+  name: 'gcr.io/cloud-builders/go'
   args: ['build']
 
 images:
