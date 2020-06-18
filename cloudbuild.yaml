@@ -1,8 +1,8 @@
 steps:
 
-- id: "Definindo o PATH"
-  name: golang
-  args: ['mod', 'init', '.']
+# - id: "Definindo o PATH"
+#   name: golang
+#   args: ['mod', 'init', '.']
 
 - id: "Rodando Testes"
   name: golang
